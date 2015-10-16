@@ -98,7 +98,7 @@ void scene(){
   
   stroke(1); 
   fill(255, 255, 0);
-  ellipse(sunX, sunY, 75, 75);  // Sun
+  ellipse(sunX, sunY, 75, 75);                    // Sun
   
   
   
@@ -275,7 +275,7 @@ void move(){                           // Move characters
  heroX = heroX + (goldX - heroX) / 60;      //move Hero, Hero follows gold 
  heroY = heroY + (goldY - heroY) / 60;
  
- monX = monX + (heroX - monX) / 80;        // move monster
+ monX = monX + (heroX - monX) / 80;        // move monster, Monster followes Hero
  monY = monY + (heroY - monY) / 80;        // monster moves at slower pace
  
  
@@ -287,7 +287,7 @@ void move(){                           // Move characters
  
 }
 
-void bounce(){                        //Bounce characters off walls
+void bounce(){                               //Bounce gold off walls
  if (goldX > width - 20 || goldX < 20) {
      goldDX *= -1;
  }
